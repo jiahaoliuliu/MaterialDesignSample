@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navigation_item_1"
+            android:id="@+id/drawer_item_1"
             android:checked="true"
             android:icon="@drawable/ic_local_airport_white_24dp"
             android:title="@string/drawer_item_1"/>
         <item
-            android:id="@+id/navigation_item_2"
+            android:id="@+id/drawer_item_2"
             android:icon="@drawable/ic_beenhere_white_24dp"
             android:title="@string/drawer_item_2"/>
     </group>
