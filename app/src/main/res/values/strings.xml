@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">MaterialDesignSample</string>
+    <string name="app_name">Material Design Sample</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!-- Main Activity -->
+    <string name="main_show_collapsing_toolbars">Show collapsing toolbars</string>
 
     <!-- Drawer -->
     <string name="drawer_header_text">Username</string>

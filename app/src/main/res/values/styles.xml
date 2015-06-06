@@ -19,4 +19,11 @@
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
+
+    <!-- Indigo without actionbar when toolbar is used -->
+    <style name="IndigoWithoutActionBar" parent="Indigo">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+   </style>
+
 </resources>
