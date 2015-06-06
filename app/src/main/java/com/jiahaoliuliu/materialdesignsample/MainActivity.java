@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     private View.OnClickListener onClickListener = new View.OnClickListener(){
