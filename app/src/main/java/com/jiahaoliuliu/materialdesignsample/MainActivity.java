@@ -1,6 +1,7 @@
 package com.jiahaoliuliu.materialdesignsample;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -8,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView mDrawer;
     private Context mContext;
 
+    private Button mShowCollapsingToolbarsButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
         mContext = this;
 
+        // Link views
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawer = (NavigationView) findViewById(R.id.drawer);
+        mShowCollapsingToolbarsButton = (Button) findViewById(R.id.show_collapsing_toolbars);
+        mShowCollapsingToolbarsButton.setOnClickListener(onClickListener);
 
         mDrawerToggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close
@@ -51,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
     }
+
+    private View.OnClickListener onClickListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.show_collapsing_toolbars:
+                    // Launch the Collapsing toolbar activity
+                    Intent startCollapsingToolbarActivity = new Intent(mContext, CollapsingToolbarActivity.class);
+                    startActivity(startCollapsingToolbarActivity);
+                break;
+            }
+        }
+    };
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

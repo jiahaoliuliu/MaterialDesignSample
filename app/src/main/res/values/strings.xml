@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">MaterialDesignSample</string>
+    <string name="app_name">Material Design Sample</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!-- Main Activity -->
+    <string name="main_show_collapsing_toolbars">Show collapsing toolbars</string>
 
     <!-- Drawer -->
     <string name="drawer_header_text">Username</string>
@@ -12,5 +12,6 @@
     <string name="drawer_close">Drawer close</string>
     <string name="drawer_item_1_clicked">First element clicked</string>
     <string name="drawer_item_2_clicked">Second element clicked</string>
+    <string name="title_activity_collapsing_toolbar">CollapsingToolbarActivity</string>
 
 </resources>
