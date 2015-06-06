@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="Indigo" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Indigo" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
@@ -20,9 +20,13 @@
         <item name="color">@android:color/white</item>
     </style>
 
+    <style name="IndigoWithoutActionBar" parent="Indigo">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+   </style>
+
     <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo">
     </style>
-
 
     <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#673AB7</item>
