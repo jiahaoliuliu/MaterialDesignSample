@@ -3,6 +3,7 @@ package com.jiahaoliuliu.materialdesignsample;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.widget.ArrayAdapter;
 import android.support.v7.widget.RecyclerView;
 
@@ -22,18 +23,23 @@ public class CollapsingToolbarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collapsing_toolbar);
 
-        // Link the views
-        mSimpleRecyclerView = (RecyclerView) findViewById(R.id.simpleRecyclerView);
+        // Actionbar
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        mSimpleRecyclerView.setHasFixedSize(true);
-
-        // Use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
-        mSimpleRecyclerView.setLayoutManager(mLayoutManager);
-
-        SimpleRecyclerViewAdapter mSimpleRecyclerViewAdapter = new SimpleRecyclerViewAdapter(mRecyclerViewValues);
-        mSimpleRecyclerView.setAdapter(mSimpleRecyclerViewAdapter);
+//        // Link the views
+//        mSimpleRecyclerView = (RecyclerView) findViewById(R.id.simpleRecyclerView);
+//
+//        // Use this setting to improve performance if you know that changes
+//        // in content do not change the layout size of the RecyclerView
+//        mSimpleRecyclerView.setHasFixedSize(true);
+//
+//        // Use a linear layout manager
+//        mLayoutManager = new LinearLayoutManager(this);
+//        mSimpleRecyclerView.setLayoutManager(mLayoutManager);
+//
+//        SimpleRecyclerViewAdapter mSimpleRecyclerViewAdapter = new SimpleRecyclerViewAdapter(mRecyclerViewValues);
+//        mSimpleRecyclerView.setAdapter(mSimpleRecyclerViewAdapter);
     }
 }
