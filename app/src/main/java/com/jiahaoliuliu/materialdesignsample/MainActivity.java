@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationView mDrawer;
+    private MenuItem mMenuItem1;
+    private MenuItem mMenuItem2;
+
     private Context mContext;
 
     private Button mShowCollapsingToolbarsButton;
@@ -32,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
         // Link views
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawer = (NavigationView) findViewById(R.id.drawer);
+        mMenuItem1 = mDrawer.getMenu().findItem(R.id.drawer_item_1);
+        mMenuItem2 = mDrawer.getMenu().findItem(R.id.drawer_item_2);
+
+        // Hide the first item
+        mMenuItem1.setVisible(false);
+
         mShowCollapsingToolbarsButton = (Button) findViewById(R.id.show_collapsing_toolbars);
         mShowCollapsingToolbarsButton.setOnClickListener(onClickListener);
 
@@ -85,21 +94,6 @@ public class MainActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch(item.getItemId()) {
-//            case android.R.id.home:
-//                if (mDrawerLayout.isDrawerOpen(mDrawer)) {
-//                    mDrawerLayout.closeDrawer(mDrawer);
-//                } else {
-//                    mDrawerLayout.openDrawer(mDrawer);
-//                }
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
